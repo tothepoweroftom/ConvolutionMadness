@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35655CCC1E967AD60007BB1B /* PaperSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; };
+		35655CD61E967B910007BB1B /* Knob+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CCE1E967B910007BB1B /* Knob+Touches.swift */; };
+		35655CD71E967B910007BB1B /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CCF1E967B910007BB1B /* Knob.swift */; };
+		35655CD81E967B910007BB1B /* KnobLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD01E967B910007BB1B /* KnobLarge.swift */; };
+		35655CD91E967B910007BB1B /* KnobMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD11E967B910007BB1B /* KnobMedium.swift */; };
+		35655CDA1E967B910007BB1B /* KnobSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD21E967B910007BB1B /* KnobSmall.swift */; };
+		35655CDB1E967B910007BB1B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD31E967B910007BB1B /* RoundedButton.swift */; };
+		35655CDC1E967B910007BB1B /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD41E967B910007BB1B /* VerticalSlider.swift */; };
+		35655CDD1E967B910007BB1B /* WaveformSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CD51E967B910007BB1B /* WaveformSegmentedView.swift */; };
+		35655CDE1E967C110007BB1B /* PaperSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; };
+		35655CDF1E967C110007BB1B /* PaperSwitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */; };
 		357A52091E95243300E6F464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A52081E95243300E6F464 /* AppDelegate.swift */; };
 		357A520B1E95243300E6F464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A520A1E95243300E6F464 /* ViewController.swift */; };
 		357A520E1E95243300E6F464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357A520C1E95243300E6F464 /* Main.storyboard */; };
@@ -14,6 +26,9 @@
 		357A52131E95243300E6F464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357A52111E95243300E6F464 /* LaunchScreen.storyboard */; };
 		357A521E1E95243300E6F464 /* ConvolutionMadnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A521D1E95243300E6F464 /* ConvolutionMadnessTests.swift */; };
 		357A52291E95243300E6F464 /* ConvolutionMadnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A52281E95243300E6F464 /* ConvolutionMadnessUITests.swift */; };
+		357A52371E95246B00E6F464 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; };
+		357A52381E95247300E6F464 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; };
+		357A52391E95247300E6F464 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +48,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		357A523A1E95247300E6F464 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				357A52391E95247300E6F464 /* AudioKit.framework in Embed Frameworks */,
+				35655CDF1E967C110007BB1B /* PaperSwitch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		35655CCB1E967AD60007BB1B /* PaperSwitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PaperSwitch.framework; sourceTree = "<group>"; };
+		35655CCE1E967B910007BB1B /* Knob+Touches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Knob+Touches.swift"; sourceTree = "<group>"; };
+		35655CCF1E967B910007BB1B /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		35655CD01E967B910007BB1B /* KnobLarge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobLarge.swift; sourceTree = "<group>"; };
+		35655CD11E967B910007BB1B /* KnobMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobMedium.swift; sourceTree = "<group>"; };
+		35655CD21E967B910007BB1B /* KnobSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobSmall.swift; sourceTree = "<group>"; };
+		35655CD31E967B910007BB1B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		35655CD41E967B910007BB1B /* VerticalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		35655CD51E967B910007BB1B /* WaveformSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformSegmentedView.swift; sourceTree = "<group>"; };
+		35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSiriWaveformView.swift; sourceTree = "<group>"; };
 		357A52051E95243300E6F464 /* ConvolutionMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvolutionMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A52081E95243300E6F464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		357A520A1E95243300E6F464 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +87,7 @@
 		357A52241E95243300E6F464 /* ConvolutionMadnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvolutionMadnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A52281E95243300E6F464 /* ConvolutionMadnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvolutionMadnessUITests.swift; sourceTree = "<group>"; };
 		357A522A1E95243300E6F464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		357A52361E95246B00E6F464 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357A52381E95247300E6F464 /* AudioKit.framework in Frameworks */,
+				357A52371E95246B00E6F464 /* AudioKit.framework in Frameworks */,
+				35655CCC1E967AD60007BB1B /* PaperSwitch.framework in Frameworks */,
+				35655CDE1E967C110007BB1B /* PaperSwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +119,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35655CCD1E967B910007BB1B /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				35655CCE1E967B910007BB1B /* Knob+Touches.swift */,
+				35655CCF1E967B910007BB1B /* Knob.swift */,
+				35655CD01E967B910007BB1B /* KnobLarge.swift */,
+				35655CD11E967B910007BB1B /* KnobMedium.swift */,
+				35655CD21E967B910007BB1B /* KnobSmall.swift */,
+				35655CD31E967B910007BB1B /* RoundedButton.swift */,
+				35655CD41E967B910007BB1B /* VerticalSlider.swift */,
+				35655CD51E967B910007BB1B /* WaveformSegmentedView.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		357A51FC1E95243300E6F464 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +160,12 @@
 				357A52081E95243300E6F464 /* AppDelegate.swift */,
 				357A520A1E95243300E6F464 /* ViewController.swift */,
 				357A520C1E95243300E6F464 /* Main.storyboard */,
+				35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */,
 				357A520F1E95243300E6F464 /* Assets.xcassets */,
 				357A52111E95243300E6F464 /* LaunchScreen.storyboard */,
+				35655CCD1E967B910007BB1B /* CustomControls */,
+				35655CCB1E967AD60007BB1B /* PaperSwitch.framework */,
+				357A52361E95246B00E6F464 /* AudioKit.framework */,
 				357A52141E95243300E6F464 /* Info.plist */,
 			);
 			path = ConvolutionMadness;
@@ -135,6 +199,7 @@
 				357A52011E95243300E6F464 /* Sources */,
 				357A52021E95243300E6F464 /* Frameworks */,
 				357A52031E95243300E6F464 /* Resources */,
+				357A523A1E95247300E6F464 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,8 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */,
+				35655CDA1E967B910007BB1B /* KnobSmall.swift in Sources */,
+				35655CD61E967B910007BB1B /* Knob+Touches.swift in Sources */,
 				357A520B1E95243300E6F464 /* ViewController.swift in Sources */,
+				35655CDB1E967B910007BB1B /* RoundedButton.swift in Sources */,
 				357A52091E95243300E6F464 /* AppDelegate.swift in Sources */,
+				35655CDC1E967B910007BB1B /* VerticalSlider.swift in Sources */,
+				35655CDD1E967B910007BB1B /* WaveformSegmentedView.swift in Sources */,
+				35655CD71E967B910007BB1B /* Knob.swift in Sources */,
+				35655CD91E967B910007BB1B /* KnobMedium.swift in Sources */,
+				35655CD81E967B910007BB1B /* KnobLarge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +492,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ConvolutionMadness",
+				);
 				INFOPLIST_FILE = ConvolutionMadness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.ConvolutionMadness;
@@ -431,6 +509,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DWNK4MCTP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ConvolutionMadness",
+				);
 				INFOPLIST_FILE = ConvolutionMadness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.ConvolutionMadness;
@@ -516,6 +598,7 @@
 				357A522F1E95243300E6F464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		357A52301E95243300E6F464 /* Build configuration list for PBXNativeTarget "ConvolutionMadnessTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +607,7 @@
 				357A52321E95243300E6F464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		357A52331E95243300E6F464 /* Build configuration list for PBXNativeTarget "ConvolutionMadnessUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +616,7 @@
 				357A52351E95243300E6F464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
