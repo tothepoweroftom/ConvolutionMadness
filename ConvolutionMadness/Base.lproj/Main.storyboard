@@ -297,6 +297,14 @@
                                     <color key="titleColor" red="0.96612411740000004" green="0.1756742613" blue="0.28040846359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWv-qk-HmA">
+                                <rect key="frame" x="26" y="364" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="eId-Gh-MAp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17674726247787476" green="0.11757359653711319" blue="0.18422970175743103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -307,6 +315,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="eId-Gh-MAp"/>
         <segue reference="Ruy-ff-eqx"/>
     </inferredMetricsTieBreakers>
 </document>
