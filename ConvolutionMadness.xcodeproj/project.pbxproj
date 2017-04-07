@@ -19,6 +19,7 @@
 		35655CDE1E967C110007BB1B /* PaperSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; };
 		35655CDF1E967C110007BB1B /* PaperSwitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */; };
+		35655CEC1E9786400007BB1B /* EffectBlokView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CEB1E9786400007BB1B /* EffectBlokView.swift */; };
 		357A52091E95243300E6F464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A52081E95243300E6F464 /* AppDelegate.swift */; };
 		357A520B1E95243300E6F464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A520A1E95243300E6F464 /* ViewController.swift */; };
 		357A520E1E95243300E6F464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357A520C1E95243300E6F464 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		35655CD41E967B910007BB1B /* VerticalSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		35655CD51E967B910007BB1B /* WaveformSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformSegmentedView.swift; sourceTree = "<group>"; };
 		35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSiriWaveformView.swift; sourceTree = "<group>"; };
+		35655CEB1E9786400007BB1B /* EffectBlokView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectBlokView.swift; sourceTree = "<group>"; };
 		357A52051E95243300E6F464 /* ConvolutionMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvolutionMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A52081E95243300E6F464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		357A520A1E95243300E6F464 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		357A52071E95243300E6F464 /* ConvolutionMadness */ = {
 			isa = PBXGroup;
 			children = (
+				35655CEB1E9786400007BB1B /* EffectBlokView.swift */,
 				357A52081E95243300E6F464 /* AppDelegate.swift */,
 				357A520A1E95243300E6F464 /* ViewController.swift */,
 				357A520C1E95243300E6F464 /* Main.storyboard */,
@@ -330,6 +333,7 @@
 				35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */,
 				35655CDA1E967B910007BB1B /* KnobSmall.swift in Sources */,
 				35655CD61E967B910007BB1B /* Knob+Touches.swift in Sources */,
+				35655CEC1E9786400007BB1B /* EffectBlokView.swift in Sources */,
 				357A520B1E95243300E6F464 /* ViewController.swift in Sources */,
 				35655CDB1E967B910007BB1B /* RoundedButton.swift in Sources */,
 				357A52091E95243300E6F464 /* AppDelegate.swift in Sources */,
