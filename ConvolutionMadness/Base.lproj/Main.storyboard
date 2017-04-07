@@ -31,9 +31,21 @@
                                     <segue destination="2qF-5g-2dc" kind="show" id="t3a-Au-4qe"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PpL-ob-bK0">
+                                <rect key="frame" x="18" y="376" width="700" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="maximumTrackTintColor" red="0.1767472625" green="0.1175735965" blue="0.18422970180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="volSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YpE-R7-AQw"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.17674726247787476" green="0.11757359653711319" blue="0.18422970175743103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="volSlider" destination="PpL-ob-bK0" id="bTr-3f-kef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

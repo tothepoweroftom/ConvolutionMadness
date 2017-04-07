@@ -20,6 +20,10 @@
 		35655CDF1E967C110007BB1B /* PaperSwitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35655CCB1E967AD60007BB1B /* PaperSwitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */; };
 		35655CEC1E9786400007BB1B /* EffectBlokView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35655CEB1E9786400007BB1B /* EffectBlokView.swift */; };
+		35655D041E97A1FC0007BB1B /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D011E97A1FC0007BB1B /* 1.wav */; };
+		35655D051E97A1FC0007BB1B /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D021E97A1FC0007BB1B /* 2.wav */; };
+		35655D061E97A1FC0007BB1B /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D031E97A1FC0007BB1B /* 3.wav */; };
+		35655D101E97E1640007BB1B /* mixloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D0F1E97E1640007BB1B /* mixloop.wav */; };
 		357A52091E95243300E6F464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A52081E95243300E6F464 /* AppDelegate.swift */; };
 		357A520B1E95243300E6F464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A520A1E95243300E6F464 /* ViewController.swift */; };
 		357A520E1E95243300E6F464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357A520C1E95243300E6F464 /* Main.storyboard */; };
@@ -76,6 +80,10 @@
 		35655CD51E967B910007BB1B /* WaveformSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformSegmentedView.swift; sourceTree = "<group>"; };
 		35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSiriWaveformView.swift; sourceTree = "<group>"; };
 		35655CEB1E9786400007BB1B /* EffectBlokView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectBlokView.swift; sourceTree = "<group>"; };
+		35655D011E97A1FC0007BB1B /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
+		35655D021E97A1FC0007BB1B /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
+		35655D031E97A1FC0007BB1B /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
+		35655D0F1E97E1640007BB1B /* mixloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mixloop.wav; sourceTree = "<group>"; };
 		357A52051E95243300E6F464 /* ConvolutionMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvolutionMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A52081E95243300E6F464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		357A520A1E95243300E6F464 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +170,10 @@
 				35655CEB1E9786400007BB1B /* EffectBlokView.swift */,
 				357A52081E95243300E6F464 /* AppDelegate.swift */,
 				357A520A1E95243300E6F464 /* ViewController.swift */,
+				35655D0F1E97E1640007BB1B /* mixloop.wav */,
+				35655D011E97A1FC0007BB1B /* 1.wav */,
+				35655D021E97A1FC0007BB1B /* 2.wav */,
+				35655D031E97A1FC0007BB1B /* 3.wav */,
 				357A520C1E95243300E6F464 /* Main.storyboard */,
 				35655CE01E9682040007BB1B /* SwiftSiriWaveformView.swift */,
 				357A520F1E95243300E6F464 /* Assets.xcassets */,
@@ -303,9 +315,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35655D061E97A1FC0007BB1B /* 3.wav in Resources */,
 				357A52131E95243300E6F464 /* LaunchScreen.storyboard in Resources */,
 				357A52101E95243300E6F464 /* Assets.xcassets in Resources */,
+				35655D041E97A1FC0007BB1B /* 1.wav in Resources */,
+				35655D051E97A1FC0007BB1B /* 2.wav in Resources */,
 				357A520E1E95243300E6F464 /* Main.storyboard in Resources */,
+				35655D101E97E1640007BB1B /* mixloop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
