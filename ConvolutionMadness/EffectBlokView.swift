@@ -9,6 +9,10 @@
 import UIKit
 import PaperSwitch
 
+protocol EffectBlokDelegate {
+    func sliderDidUpdate(_ sender: EffectBlokView)
+}
+
 class EffectBlokView: UIView {
     var changeButton: UIButton!
     var slider: UISlider!
@@ -22,6 +26,10 @@ class EffectBlokView: UIView {
     
     var swWidth = 20.0
     var swHeight = 10.0
+    
+    var id: Int!
+    
+    var delegate: EffectBlokDelegate!
 
   
 
@@ -36,6 +44,7 @@ class EffectBlokView: UIView {
        slider.maximumTrackTintColor = self.backgroundColor
        slider.backgroundColor = self.backgroundColor
        slider.minimumTrackTintColor = .white
+        slider.addTarget(self, action: #selector(updateSliderValue), for: .touchDragInside)
         
         switchOn = UISwitch(frame: CGRect(x: Double(frame.width/2) - swWidth, y: 5.0 + swHeight, width: swWidth, height: swHeight))
         switchOn.onTintColor = self.backgroundColor
@@ -51,7 +60,17 @@ class EffectBlokView: UIView {
         backgroundColor = col
     }
     
+    func setID(_ id: Int) {
+        
+        self.id = id
+        
+    }
+    
     func setSliderWidth(_ w: Double) {
         slWidth = w
+    }
+    
+    func updateSliderValue(){
+        delegate.sliderDidUpdate(self)
     }
 }

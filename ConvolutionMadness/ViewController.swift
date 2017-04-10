@@ -9,7 +9,7 @@
 import UIKit
 import AudioKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, EffectBlokDelegate {
     
     var bloks = [EffectBlokView]()
     
@@ -48,7 +48,11 @@ class ViewController: UIViewController {
 
             blok.awakeFromNib()
             blok.setColor(colors[i])
+            blok.setID(i)
+            blok.delegate = self
             bloks.append(blok)
+            
+        
         
             view.addSubview(bloks[i])
         
@@ -71,7 +75,6 @@ class ViewController: UIViewController {
             
         }
         print(urls)
-        AKSettings.audioInputEnabled = true
         do {
 //         try AKSettings.session.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
          try AKSettings.setSession(category: .playAndRecord, with: .defaultToSpeaker)
@@ -79,24 +82,36 @@ class ViewController: UIViewController {
             
         }
 //        input = AKMicrophone()
-        conv = AKConvolution(audio, impulseResponseFileURL: urls[0], partitionLength: 1024)
-        var vol1 = AKDryWetMixer(audio, conv)
-        var conv2 = AKConvolution(vol1, impulseResponseFileURL: urls[1], partitionLength: 1024)
+        conv = AKConvolution(audio, impulseResponseFileURL: urls[2], partitionLength: 1024)
+        var vol1 = AKMixer(conv)
+        var wd1 = AKDryWetMixer(audio, vol1, balance: 0.5)
+        vol1.volume = 0.01
+        var conv2 = AKConvolution(vol1, impulseResponseFileURL: urls[2], partitionLength: 1024)
         var vol2 = AKMixer(conv2)
         vol2.volume = 0.01
+        var wd2 = AKDryWetMixer(wd1, vol2, balance: 0.5)
+
+        
 
         var conv3 = AKConvolution(vol2, impulseResponseFileURL: urls[2], partitionLength: 1024)
-        
+        var wd3 = AKDryWetMixer(wd2, conv3, balance: 0.5)
+
         convArray.append(conv)
         convArray.append(conv2)
         convArray.append(conv3)
+        mixerArray.append(wd1)
+        mixerArray.append(wd2)
+        mixerArray.append(wd3)
+
 
         
 
         
-        vol = AKMixer(conv3)
+        vol = AKMixer(wd3)
         
-        vol.volume = 1.0
+        vol.volume = 0.5
+        
+
         
         
 
@@ -113,9 +128,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         AudioKit.output = vol
         AudioKit.start()
+
         for conv in convArray {
             conv.start()
         }
+        audio.start()
+
         audio.play()
 
         
@@ -142,6 +160,20 @@ class ViewController: UIViewController {
         vol.volume = Double(sender.value)
     }
 
+    func sliderDidUpdate(_ sender: EffectBlokView) {
+        switch sender.id {
+        case 0:
+            mixerArray[0].balance = Double(sender.slider.value)
+        case 1:
+            mixerArray[1].balance = Double(sender.slider.value)
+        case 2:
+            mixerArray[2].balance = Double(sender.slider.value)
+        default:
+            break
+        }
+        print(sender.slider.value)
+        print(sender.id)
+    }
 
 }
 
