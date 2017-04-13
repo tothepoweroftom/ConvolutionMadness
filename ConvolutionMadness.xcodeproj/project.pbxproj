@@ -24,6 +24,7 @@
 		35655D051E97A1FC0007BB1B /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D021E97A1FC0007BB1B /* 2.wav */; };
 		35655D061E97A1FC0007BB1B /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D031E97A1FC0007BB1B /* 3.wav */; };
 		35655D101E97E1640007BB1B /* mixloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35655D0F1E97E1640007BB1B /* mixloop.wav */; };
+		35785C2A1E9F86CC00F7EE5F /* ConvBlok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35785C291E9F86CC00F7EE5F /* ConvBlok.swift */; };
 		357A52091E95243300E6F464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A52081E95243300E6F464 /* AppDelegate.swift */; };
 		357A520B1E95243300E6F464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A520A1E95243300E6F464 /* ViewController.swift */; };
 		357A520E1E95243300E6F464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357A520C1E95243300E6F464 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		35655D021E97A1FC0007BB1B /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
 		35655D031E97A1FC0007BB1B /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
 		35655D0F1E97E1640007BB1B /* mixloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mixloop.wav; sourceTree = "<group>"; };
+		35785C291E9F86CC00F7EE5F /* ConvBlok.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvBlok.swift; sourceTree = "<group>"; };
 		357A52051E95243300E6F464 /* ConvolutionMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvolutionMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357A52081E95243300E6F464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		357A520A1E95243300E6F464 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				35655CEB1E9786400007BB1B /* EffectBlokView.swift */,
 				357A52081E95243300E6F464 /* AppDelegate.swift */,
 				357A520A1E95243300E6F464 /* ViewController.swift */,
+				35785C291E9F86CC00F7EE5F /* ConvBlok.swift */,
 				35655D0F1E97E1640007BB1B /* mixloop.wav */,
 				35655D011E97A1FC0007BB1B /* 1.wav */,
 				35655D021E97A1FC0007BB1B /* 2.wav */,
@@ -356,6 +359,7 @@
 			files = (
 				35655CE11E9682040007BB1B /* SwiftSiriWaveformView.swift in Sources */,
 				35655CDA1E967B910007BB1B /* KnobSmall.swift in Sources */,
+				35785C2A1E9F86CC00F7EE5F /* ConvBlok.swift in Sources */,
 				35655CD61E967B910007BB1B /* Knob+Touches.swift in Sources */,
 				35655CEC1E9786400007BB1B /* EffectBlokView.swift in Sources */,
 				357A520B1E95243300E6F464 /* ViewController.swift in Sources */,
@@ -525,6 +529,7 @@
 					"$(PROJECT_DIR)/ConvolutionMadness",
 				);
 				INFOPLIST_FILE = ConvolutionMadness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.ConvolutionMadness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,6 +547,7 @@
 					"$(PROJECT_DIR)/ConvolutionMadness",
 				);
 				INFOPLIST_FILE = ConvolutionMadness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.ConvolutionMadness;
 				PRODUCT_NAME = "$(TARGET_NAME)";

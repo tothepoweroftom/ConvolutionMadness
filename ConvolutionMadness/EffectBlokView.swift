@@ -11,6 +11,7 @@ import PaperSwitch
 
 protocol EffectBlokDelegate {
     func sliderDidUpdate(_ sender: EffectBlokView)
+    func bypass(_ sender: EffectBlokView)
 }
 
 class EffectBlokView: UIView {
@@ -30,6 +31,7 @@ class EffectBlokView: UIView {
     var id: Int!
     
     var delegate: EffectBlokDelegate!
+    var isBypassed = false
 
   
 
@@ -72,5 +74,9 @@ class EffectBlokView: UIView {
     
     func updateSliderValue(){
         delegate.sliderDidUpdate(self)
+    }
+    
+    func bypassToggle() {
+        isBypassed != isBypassed
     }
 }

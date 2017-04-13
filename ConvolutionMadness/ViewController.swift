@@ -19,7 +19,7 @@ class ViewController: UIViewController, EffectBlokDelegate {
     var margin = 20.0
     
     
-    var convArray = [AKConvolution]()
+    var convArray = [ConvBlok]()
     var volMixerArray = [AKMixer]()
     var conv: AKConvolution!
 
@@ -33,6 +33,7 @@ class ViewController: UIViewController, EffectBlokDelegate {
     var mixloop: AKAudioFile!
         
 
+    @IBOutlet weak var `switch`: UISwitch!
     
     
     @IBOutlet weak var volSlider: UISlider!
@@ -81,60 +82,23 @@ class ViewController: UIViewController, EffectBlokDelegate {
         } catch {
             
         }
-//        input = AKMicrophone()
-        conv = AKConvolution(audio, impulseResponseFileURL: urls[2], partitionLength: 1024)
-        var vol1 = AKMixer(conv)
-        var wd1 = AKDryWetMixer(audio, vol1, balance: 0.5)
-        vol1.volume = 0.01
-        var conv2 = AKConvolution(vol1, impulseResponseFileURL: urls[2], partitionLength: 1024)
-        var vol2 = AKMixer(conv2)
-        vol2.volume = 0.01
-        var wd2 = AKDryWetMixer(wd1, vol2, balance: 0.5)
 
-        
-
-        var conv3 = AKConvolution(vol2, impulseResponseFileURL: urls[2], partitionLength: 1024)
-        var wd3 = AKDryWetMixer(wd2, conv3, balance: 0.5)
-
-        convArray.append(conv)
-        convArray.append(conv2)
-        convArray.append(conv3)
-        mixerArray.append(wd1)
-        mixerArray.append(wd2)
-        mixerArray.append(wd3)
-
-
-        
-
-        
-        vol = AKMixer(wd3)
-        
-        vol.volume = 0.5
-        
-
-        
-        
-
-        
+        for i in 0...2 {
+            let con = ConvBlok(input: audio, convFile: urls[i])
+            convArray.append(con)
+        }
   
         
- 
+        vol = AKMixer(convArray[0].mixer)
 
-        
+        AudioKit.output = vol
+
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        AudioKit.output = vol
-        AudioKit.start()
 
-        for conv in convArray {
-            conv.start()
-        }
-        audio.start()
-
-        audio.play()
 
         
     }
@@ -155,6 +119,25 @@ class ViewController: UIViewController, EffectBlokDelegate {
 
     }
     
+    @IBAction func switchPressed(_ sender: UISwitch) {
+        if sender.isOn {
+            AudioKit.start()
+            
+            convArray[0].start()
+            convArray[1].start()
+
+            audio.play()
+            
+
+        } else {
+            AudioKit.stop()
+            
+            for conv in convArray {
+                conv.stop()
+            }
+            audio.stop()
+        }
+    }
     
     @IBAction func volSliderChanged(_ sender: UISlider) {
         vol.volume = Double(sender.value)
@@ -163,16 +146,31 @@ class ViewController: UIViewController, EffectBlokDelegate {
     func sliderDidUpdate(_ sender: EffectBlokView) {
         switch sender.id {
         case 0:
-            mixerArray[0].balance = Double(sender.slider.value)
+            convArray[0].mixer.balance = Double(sender.slider.value)
         case 1:
-            mixerArray[1].balance = Double(sender.slider.value)
+            convArray[1].mixer.balance = Double(sender.slider.value)
         case 2:
-            mixerArray[2].balance = Double(sender.slider.value)
+            convArray[2].mixer.balance = Double(sender.slider.value)
         default:
             break
         }
         print(sender.slider.value)
         print(sender.id)
+    }
+    
+    func bypass(_ sender: EffectBlokView) {
+        switch sender.id {
+        case 0:
+            convArray[0].bypass(sender.isBypassed)
+        case 1:
+            convArray[1].bypass(sender.isBypassed)
+        case 2:
+            convArray[2].bypass(sender.isBypassed)
+        default:
+            break
+        }
+            
+        
     }
 
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,19 +32,39 @@
                                     <segue destination="2qF-5g-2dc" kind="show" id="t3a-Au-4qe"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PpL-ob-bK0">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PpL-ob-bK0">
                                 <rect key="frame" x="18" y="376" width="700" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K4L-TK-axN"/>
+                                </constraints>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" red="0.1767472625" green="0.1175735965" blue="0.18422970180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="volSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YpE-R7-AQw"/>
                                 </connections>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rAq-IE-v2z">
+                                <rect key="frame" x="344" y="20" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Siz-Qb-lEH"/>
+                                    <constraint firstAttribute="width" constant="49" id="tQH-Qf-ll2"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="VII-A0-QjA"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.17674726247787476" green="0.11757359653711319" blue="0.18422970175743103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PpL-ob-bK0" secondAttribute="bottom" constant="8" id="JA4-Zh-cmX"/>
+                            <constraint firstItem="rAq-IE-v2z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ud0-Kv-58u"/>
+                            <constraint firstItem="PpL-ob-bK0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WoX-qn-qaE"/>
+                            <constraint firstItem="PpL-ob-bK0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZKy-gB-zMA"/>
+                            <constraint firstItem="rAq-IE-v2z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t9u-nj-jj4"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="switch" destination="rAq-IE-v2z" id="bm8-1V-mnV"/>
                         <outlet property="volSlider" destination="PpL-ob-bK0" id="bTr-3f-kef"/>
                     </connections>
                 </viewController>
