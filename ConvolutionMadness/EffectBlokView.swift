@@ -11,12 +11,16 @@ import PaperSwitch
 
 protocol EffectBlokDelegate {
     func sliderDidUpdate(_ sender: EffectBlokView)
+    func slider2DidUpdate(_ sender: EffectBlokView)
+
     func bypass(_ sender: EffectBlokView)
 }
 
 class EffectBlokView: UIView {
     var changeButton: UIButton!
     var slider: UISlider!
+    var slider2: UISlider!
+
     var switchOn: UISwitch!
     
     var btWidth = 100.0
@@ -48,12 +52,23 @@ class EffectBlokView: UIView {
        slider.minimumTrackTintColor = .white
         slider.addTarget(self, action: #selector(updateSliderValue), for: .touchDragInside)
         
+        slider2 = UISlider(frame: CGRect(x: frame.width/2 - CGFloat(slWidth/2), y: frame.height/2 + CGFloat(slHeight*4), width: CGFloat(slWidth), height: CGFloat(slHeight)))
+        slider2.maximumTrackTintColor = self.backgroundColor
+        slider2.backgroundColor = self.backgroundColor
+        slider2.minimumTrackTintColor = .white
+        slider2.minimumValue = -24.0
+        slider2.isContinuous = false
+        slider2.maximumValue = 24.0
+        slider2.addTarget(self, action: #selector(updateSliderValue2), for: .touchDragInside)
+        
         switchOn = UISwitch(frame: CGRect(x: Double(frame.width/2) - swWidth, y: 5.0 + swHeight, width: swWidth, height: swHeight))
         switchOn.onTintColor = self.backgroundColor
         switchOn.backgroundColor = self.backgroundColor
         
 //        self.addSubview(changeButton)
         self.addSubview(slider)
+        self.addSubview(slider2)
+
         self.addSubview(switchOn)
         
     }
@@ -74,6 +89,9 @@ class EffectBlokView: UIView {
     
     func updateSliderValue(){
         delegate.sliderDidUpdate(self)
+    }
+    func updateSliderValue2(){
+        delegate.slider2DidUpdate(self)
     }
     
     func bypassToggle() {

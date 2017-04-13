@@ -29,6 +29,7 @@ class ViewController: UIViewController, EffectBlokDelegate {
     var input: AKMicrophone!
     var booster: AKBooster!
     var audio: AKAudioPlayer!
+    var dryWet: AKDryWetMixer!
     
     var mixloop: AKAudioFile!
         
@@ -60,14 +61,15 @@ class ViewController: UIViewController, EffectBlokDelegate {
 
         }
         for i in 0...2 {
-            let urlpath = Bundle.main.path(forResource: "hit_\(i+1)", ofType: ".wav")
+            let urlpath = Bundle.main.path(forResource: "\(i+40)", ofType: ".wav")
             let fileURL = URL(fileURLWithPath: urlpath!)
             urls.append(fileURL)
         }
         do {
             
-            let urlpath = Bundle.main.path(forResource: "mixloop", ofType: ".wav")
+            let urlpath = Bundle.main.path(forResource: "Theme2", ofType: ".mp3")
             let fileURL = URL(fileURLWithPath: urlpath!)
+            AKSettings.bufferLength = .long
 
 
            mixloop = try AKAudioFile(forReading: fileURL)
@@ -84,14 +86,23 @@ class ViewController: UIViewController, EffectBlokDelegate {
 //        }
 
         for i in 0...2 {
+            if (i==0){
             let con = ConvBlok(input: audio, convFile: urls[i])
-            convArray.append(con)
+                convArray.append(con)
+
+            } else {
+                let con = ConvBlok(input: audio, convFile: urls[i])
+                convArray.append(con)
+
+
+            }
         }
   
         
         vol = AKMixer(convArray[0].mixer, convArray[1].mixer,convArray[2].mixer )
-
-        AudioKit.output = vol
+        dryWet = AKDryWetMixer(audio, vol, balance: 0.5)
+        vol.volume = 0.2
+        AudioKit.output = dryWet
 
         
         
@@ -142,17 +153,32 @@ class ViewController: UIViewController, EffectBlokDelegate {
     }
     
     @IBAction func volSliderChanged(_ sender: UISlider) {
-        vol.volume = Double(sender.value)
+        dryWet.balance = Double(sender.value)
     }
 
     func sliderDidUpdate(_ sender: EffectBlokView) {
         switch sender.id {
         case 0:
-            convArray[0].mixer.balance = Double(sender.slider.value)
+            convArray[0].mixer.volume = Double(sender.slider.value)
         case 1:
-            convArray[1].mixer.balance = Double(sender.slider.value)
+            convArray[1].mixer.volume = Double(sender.slider.value)
         case 2:
-            convArray[2].mixer.balance = Double(sender.slider.value)
+            convArray[2].mixer.volume = Double(sender.slider.value)
+        default:
+            break
+        }
+        print(sender.slider.value)
+        print(sender.id)
+    }
+    
+    func slider2DidUpdate(_ sender: EffectBlokView) {
+        switch sender.id {
+        case 0:
+            convArray[0].pitchShifter.shift = Double(sender.slider2.value)
+        case 1:
+            convArray[1].pitchShifter.shift = Double(sender.slider2.value)
+        case 2:
+            convArray[2].pitchShifter.shift = Double(sender.slider2.value)
         default:
             break
         }

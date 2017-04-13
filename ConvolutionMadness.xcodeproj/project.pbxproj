@@ -48,6 +48,14 @@
 		357A52371E95246B00E6F464 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; };
 		357A52381E95247300E6F464 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; };
 		357A52391E95247300E6F464 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 357A52361E95246B00E6F464 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35BA338C1E9FB32800C1B55D /* Theme2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 35BA338B1E9FB32800C1B55D /* Theme2.mp3 */; };
+		35BA338E1E9FB6AF00C1B55D /* 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA338D1E9FB6AF00C1B55D /* 4.wav */; };
+		35BA34161E9FB7B300C1B55D /* 104.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33961E9FB7B200C1B55D /* 104.wav */; };
+		35BA34171E9FB7B300C1B55D /* 105.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33971E9FB7B200C1B55D /* 105.wav */; };
+		35BA34181E9FB7B300C1B55D /* 106.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33981E9FB7B200C1B55D /* 106.wav */; };
+		35BA344E1E9FB7B300C1B55D /* 40.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33CE1E9FB7B300C1B55D /* 40.wav */; };
+		35BA344F1E9FB7B300C1B55D /* 41.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33CF1E9FB7B300C1B55D /* 41.wav */; };
+		35BA34501E9FB7B300C1B55D /* 42.wav in Resources */ = {isa = PBXBuildFile; fileRef = 35BA33D01E9FB7B300C1B55D /* 42.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +134,14 @@
 		357A52281E95243300E6F464 /* ConvolutionMadnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvolutionMadnessUITests.swift; sourceTree = "<group>"; };
 		357A522A1E95243300E6F464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		357A52361E95246B00E6F464 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		35BA338B1E9FB32800C1B55D /* Theme2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme2.mp3; sourceTree = "<group>"; };
+		35BA338D1E9FB6AF00C1B55D /* 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 4.wav; sourceTree = "<group>"; };
+		35BA33961E9FB7B200C1B55D /* 104.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 104.wav; path = "Diverse Sounds/104.wav"; sourceTree = "<group>"; };
+		35BA33971E9FB7B200C1B55D /* 105.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 105.wav; path = "Diverse Sounds/105.wav"; sourceTree = "<group>"; };
+		35BA33981E9FB7B200C1B55D /* 106.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 106.wav; path = "Diverse Sounds/106.wav"; sourceTree = "<group>"; };
+		35BA33CE1E9FB7B300C1B55D /* 40.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 40.wav; path = "Diverse Sounds/40.wav"; sourceTree = "<group>"; };
+		35BA33CF1E9FB7B300C1B55D /* 41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 41.wav; path = "Diverse Sounds/41.wav"; sourceTree = "<group>"; };
+		35BA33D01E9FB7B300C1B55D /* 42.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 42.wav; path = "Diverse Sounds/42.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,9 +219,17 @@
 				35655D011E97A1FC0007BB1B /* 1.wav */,
 				35655D021E97A1FC0007BB1B /* 2.wav */,
 				35785C2B1E9FA76400F7EE5F /* custom_1.wav */,
+				35BA338D1E9FB6AF00C1B55D /* 4.wav */,
 				35785C2C1E9FA76400F7EE5F /* custom_2.wav */,
 				35785C2D1E9FA76400F7EE5F /* custom_3.wav */,
+				35BA338B1E9FB32800C1B55D /* Theme2.mp3 */,
 				35655D031E97A1FC0007BB1B /* 3.wav */,
+				35BA33961E9FB7B200C1B55D /* 104.wav */,
+				35BA33971E9FB7B200C1B55D /* 105.wav */,
+				35BA33981E9FB7B200C1B55D /* 106.wav */,
+				35BA33CE1E9FB7B300C1B55D /* 40.wav */,
+				35BA33CF1E9FB7B300C1B55D /* 41.wav */,
+				35BA33D01E9FB7B300C1B55D /* 42.wav */,
 				35785C311E9FA7B600F7EE5F /* hit_1.wav */,
 				35785C321E9FA7B600F7EE5F /* hit_2.wav */,
 				35785C331E9FA7B600F7EE5F /* hit_3.wav */,
@@ -367,11 +391,15 @@
 			files = (
 				35655D061E97A1FC0007BB1B /* 3.wav in Resources */,
 				35785C421E9FA7B600F7EE5F /* hit_8.wav in Resources */,
+				35BA344E1E9FB7B300C1B55D /* 40.wav in Resources */,
 				357A52131E95243300E6F464 /* LaunchScreen.storyboard in Resources */,
 				357A52101E95243300E6F464 /* Assets.xcassets in Resources */,
 				35785C3D1E9FA7B600F7EE5F /* hit_3.wav in Resources */,
+				35BA34181E9FB7B300C1B55D /* 106.wav in Resources */,
 				35785C3F1E9FA7B600F7EE5F /* hit_5.wav in Resources */,
 				35785C301E9FA76400F7EE5F /* custom_3.wav in Resources */,
+				35BA34501E9FB7B300C1B55D /* 42.wav in Resources */,
+				35BA34171E9FB7B300C1B55D /* 105.wav in Resources */,
 				35785C2E1E9FA76400F7EE5F /* custom_1.wav in Resources */,
 				35655D041E97A1FC0007BB1B /* 1.wav in Resources */,
 				35655D051E97A1FC0007BB1B /* 2.wav in Resources */,
@@ -379,12 +407,16 @@
 				35785C441E9FA7B600F7EE5F /* hit_10.wav in Resources */,
 				357A520E1E95243300E6F464 /* Main.storyboard in Resources */,
 				35655D101E97E1640007BB1B /* mixloop.wav in Resources */,
+				35BA34161E9FB7B300C1B55D /* 104.wav in Resources */,
+				35BA338C1E9FB32800C1B55D /* Theme2.mp3 in Resources */,
 				35785C2F1E9FA76400F7EE5F /* custom_2.wav in Resources */,
 				35785C3B1E9FA7B600F7EE5F /* hit_1.wav in Resources */,
+				35BA344F1E9FB7B300C1B55D /* 41.wav in Resources */,
 				35785C3E1E9FA7B600F7EE5F /* hit_4.wav in Resources */,
 				35785C431E9FA7B600F7EE5F /* hit_9.wav in Resources */,
 				35785C411E9FA7B600F7EE5F /* hit_7.wav in Resources */,
 				35785C401E9FA7B600F7EE5F /* hit_6.wav in Resources */,
+				35BA338E1E9FB6AF00C1B55D /* 4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

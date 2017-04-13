@@ -11,7 +11,11 @@ import AudioKit
 
 class ConvBlok {
     var conv1: AKConvolution!
-    var mixer: AKDryWetMixer!
+    var conv2: AKConvolution!
+    var booster: AKBooster!
+    var pitchShifter: AKPitchShifter!
+
+    var mixer: AKMixer!
     var gain: AKMixer!
     var convFile: URL!
     var inputNode: AKNode!
@@ -22,7 +26,10 @@ class ConvBlok {
         self.convFile = convFile
         
         conv1 = AKConvolution(self.inputNode, impulseResponseFileURL: self.convFile, partitionLength: 256)
-        mixer = AKDryWetMixer(inputNode, conv1, balance: 0.5)
+        booster = AKBooster(conv1, gain: 6.0)
+        pitchShifter = AKPitchShifter(booster)
+        pitchShifter.shift = -12.0
+        mixer = AKMixer(pitchShifter)
     }
     
     func start(){
@@ -36,9 +43,9 @@ class ConvBlok {
     func bypass(_ state: Bool) {
         
         if state {
-            mixer.balance = 0.5
+            mixer.volume = 0.5
         } else {
-            mixer.balance = 0.0
+            mixer.volume = 0.0
 
         }
         
