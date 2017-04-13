@@ -60,7 +60,7 @@ class ViewController: UIViewController, EffectBlokDelegate {
 
         }
         for i in 0...2 {
-            let urlpath = Bundle.main.path(forResource: "\(i+1)", ofType: ".wav")
+            let urlpath = Bundle.main.path(forResource: "hit_\(i+1)", ofType: ".wav")
             let fileURL = URL(fileURLWithPath: urlpath!)
             urls.append(fileURL)
         }
@@ -76,12 +76,12 @@ class ViewController: UIViewController, EffectBlokDelegate {
             
         }
         print(urls)
-        do {
-//         try AKSettings.session.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
-         try AKSettings.setSession(category: .playAndRecord, with: .defaultToSpeaker)
-        } catch {
-            
-        }
+//        do {
+////         try AKSettings.session.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+//         try AKSettings.setSession(category: .playAndRecord, with: .defaultToSpeaker)
+//        } catch {
+//            
+//        }
 
         for i in 0...2 {
             let con = ConvBlok(input: audio, convFile: urls[i])
@@ -89,7 +89,7 @@ class ViewController: UIViewController, EffectBlokDelegate {
         }
   
         
-        vol = AKMixer(convArray[0].mixer)
+        vol = AKMixer(convArray[0].mixer, convArray[1].mixer,convArray[2].mixer )
 
         AudioKit.output = vol
 
@@ -125,6 +125,8 @@ class ViewController: UIViewController, EffectBlokDelegate {
             
             convArray[0].start()
             convArray[1].start()
+            convArray[2].start()
+
 
             audio.play()
             
